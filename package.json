@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "data": "babel-node data-harvesting/data.js",
     "test": "jest",
     "test-watch": "jest --watch"
   },
@@ -11,11 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "coinmarketcap-api": "^1.0.1",
     "cryptocompare": "^0.4.0",
     "jest": "^22.2.2",
     "lodash": "^4.17.5",
     "luxon": "^0.4.0",
-    "node-fetch": "^2.0.0"
+    "moment": "^2.20.1",
+    "mongodb": "^3.0.2",
+    "node-babel": "^0.1.2",
+    "node-fetch": "^2.0.0",
+    "twix": "^1.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

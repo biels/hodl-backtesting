@@ -11,7 +11,7 @@ export function calculateDesiredWeights(topCurrencies) {
 
     let limitedWeights =  Object.keys(rawWeights)
         .map(k => ({[k]: Math.max(rawWeights[k], 0.1)}))
-        .reduce((pv, cv) => Object.assign(pv, cv), {})
+            .reduce((pv, cv) => Object.assign(pv, cv), {})
 
     let limitedSum = Object.keys(limitedWeights)
         .map(k => limitedWeights[k])

@@ -7,8 +7,8 @@ describe('calculateDesiredWeights', function () {
             ETH: {cap: 2500000},
             XRP: {cap: 2000000},
         }
-        let desiredState = calculateDesiredWeights(topCurrencies);
-        let check = (c, target) => expect(desiredState[c]).toBeCloseTo(target, 2)
+        let desiredWeights = calculateDesiredWeights(topCurrencies);
+        let check = (c, target) => expect(desiredWeights[c]).toBeCloseTo(target, 2)
         check('BTC', 0.4)
         check('ETH', 0.333)
         check('XRP', 0.266)
