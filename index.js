@@ -1,4 +1,4 @@
-import {calculateDesiredState} from "./calculateDesiredState";
+import {calculateDesiredWeights} from "./calculateDesiredWeights";
 
 global.fetch = require('node-fetch')
 const cc = require('cryptocompare')
@@ -24,7 +24,7 @@ dates.reduce((date, history) => {
     let previousState = history.last();
     let topCurrencies = getTopNAtDate(date, n);
     //Calculate desired state
-    let desiredState = calculateDesiredState(topCurrencies);
+    let desiredState = calculateDesiredWeights(topCurrencies);
     //Calculate delta
     let delta = calculateDelta(previousState, desiredState);
     //Delta: BTC -0.3 (-30%) LTC 5.5 (+10%) XRP +4500 (+20%)
