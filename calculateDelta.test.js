@@ -12,7 +12,7 @@ describe('calculateDelta', function () {
         };
         expect(calculateDelta(previousState, desiredState)).toEqual({
             BTC: -1,
-            ETH: 2
+            ETH: 3
         })
     });
     it('one enters', function () {
@@ -27,7 +27,7 @@ describe('calculateDelta', function () {
         };
         expect(calculateDelta(previousState, desiredState)).toEqual({
             BTC: -1,
-            ETH: 2,
+            ETH: -4,
             XRP: 1
         })
     });
